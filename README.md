@@ -1,6 +1,6 @@
 <br clear="both">
 
-<h2 align="center">"Hey there, 👋Darshan here, an Android developer passionate about machine learning. An enduring love for bits, bytes, and bug fixes."</h2>
+<h2 align="center">"Hey there, 👋Darshan here, an Android developer and  passionate about machine learning. An enduring love for bits, bytes, and bug fixes."</h2>
 
 ###
 
