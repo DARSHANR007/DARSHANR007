@@ -1,26 +1,30 @@
-# DARSHAN R
+# Darshan Ravichandran
+
+Backend-focused software engineer interested in building reliable, scalable systems.
+Currently working with Golang and Java, and learning how real-world backend systems are designed and operated at scale.
 
 ---
 
-### [spec.profile]
+### Focus
+- Backend engineering
+- Distributed systems & scalability
+- API design and system fundamentals
 
-Architecting predictable, high-throughput backend infrastructure. I advocate for **radical simplicity** as the prerequisite for reliability and maintainability at scale.
+### Tech
+- Languages: Golang, Java
+- Databases: PostgreSQL, MySQL
+- Systems: REST APIs, WebSockets, Kafka (learning)
+- Tools: Git, Docker, Linux
 
-### [spec.runtime]
+---
 
-```text
-Primary Languages  ::  Go, Java
-System Design      ::  Distributed Systems, Event-Driven Architecture
-```
+### Profiles & Writing
+- LeetCode: https://leetcode.com/
+- Codeforces: https://codeforces.com/
+- Medium: https://medium.com/
+- Portfolio: https://your-portfolio-link
+- LinkedIn: https://linkedin.com/in/
 
-### [spec.infrastructure]
+---
 
-Kubernetes  /  Docker  /  Terraform  /  gRPC  /  Cloud Primitives
-
-### [spec.active_status]
-
-Refining consensus algorithms for high-availability clusters and optimizing GC latency in large-scale heaps.
-
-### [spec.connectivity]
-
-[Email](mailto:contact@example.com) &nbsp;/&nbsp; [LinkedIn](https://linkedin.com) &nbsp;/&nbsp; [Blog](https://example.com)
+Currently focused on strengthening backend fundamentals and building systems that can scale.
