@@ -1,7 +1,7 @@
-# Darshan R
+# ```Darshan R```
 
 
-Interested in backend systems, scale, and system design.
+```Interested in backend systems, scale, and system design.```
 
 
 
@@ -18,4 +18,4 @@ Interested in backend systems, scale, and system design.
 
 <br/>
 
-Always learning, building, and improving as a backend engineer.
+```Always learning, building, and improving as a backend engineer```
