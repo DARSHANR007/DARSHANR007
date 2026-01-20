@@ -7,7 +7,8 @@
 
 
 
-### Socials
+ ```Socials```
+ <br/>
 [LinkedIn](https://www.linkedin.com/in/darshanravi77/),
 [LeetCode](https://leetcode.com/u/Darshan_Ravichandran/),
 [Codeforces](https://codeforces.com/profile/darshanr1),
@@ -18,4 +19,4 @@
 
 <br/>
 
-```Always learning, building, and improving as a backend engineer```
+```In Transit```
