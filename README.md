@@ -3,7 +3,7 @@
 
 ```Interested in backend systems, scale, system design and Distributed Systems.```
 
-``` My musings can be found at ``` [My portfolio](https://thedarshanravichandran.vercel.app/)
+``` My musings can be found ``` [here](https://thedarshanravichandran.vercel.app/)
 
 
 
