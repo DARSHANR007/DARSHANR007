@@ -1,5 +1,8 @@
 # Hi, I'm Darshan Ravichandran 👋
 
+
+![Traffic](https://komarev.com/ghpvc/?username=DARSHANR007&label=Traffic&color=red&style=plastic)
+
 Backend engineer focused on building systems that are correct, fast, and don't break under pressure. I've been programming for 3+ years  started with frontend, moved into backend and distributed systems, and haven't looked back.
 
 I like to learn , write high performance software.
@@ -24,10 +27,6 @@ AWS · Docker · Git · Postman · Linux
 
 ---
 
-## 📚 Coursework
-Data Structures & Algorithms · DBMS · Object Oriented Programming · Software Engineering · Cloud Computing
-
----
 
 ## 🏆 Achievements
 
