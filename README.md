@@ -1,6 +1,12 @@
 # Hi, I'm Darshan Ravichandran 👋
 
 
+
+<p align="center">
+  <img src="200.webp" width="1300" height="250" />
+</p>
+
+
 ![Traffic](https://komarev.com/ghpvc/?username=DARSHANR007&label=Traffic&color=red&style=plastic)
 
 Backend engineer focused on building systems that are correct, fast, and don't break under pressure. I've been programming for 3+ years  started with frontend, moved into backend and distributed systems, and haven't looked back.
@@ -28,13 +34,7 @@ AWS · Docker · Git · Postman · Linux
 ---
 
 
-## 🏆 Achievements
 
-- **IndiaAI Fellowship Grant (MeitY)** — Selected for AI research fellowship, authored 2 IEEE publications at International conferences.
-- **Codeforces Specialist** — Global Rank 1200 in Codeforces Round 185
-- **CodeChef 3-Star** — Global Rank 600 in CodeChef DSA competition with 1600+ rating
-- **LeetCode** — 1600+ rating
-- Open source contributor focused on backend infrastructure
 
 ---
 
