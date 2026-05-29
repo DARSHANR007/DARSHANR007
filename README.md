@@ -25,10 +25,19 @@
 
 ┌─ CURRENTLY ────────────────────────────────────────────────┐
 │                                                            │
-│  • Open source contributions                               │
-│  • Backend development                                     │
-│  • Distributed systems                                     │
-│  • Linux internals                                         │
+│   Open source contributions                                │
+│   Backend development                                      │
+│   Distributed systems                                      │
+│   Linux internals                                          │
+│                                                            │
+└────────────────────────────────────────────────────────────┘
+
+┌─ MY OSS CONTRIBUTIONS ─────────────────────────────────────┐
+│                                                            |
+|       CLOUDFLARE   RQLITE   COBRA   CILIUM/EBPF            |
+|                                                            |
+|       DISTRIBUTION(CNCF)                                   │
+│                                                            │
 │                                                            │
 └────────────────────────────────────────────────────────────┘
 
