@@ -10,7 +10,7 @@
 
 ┌─ SKILLS ───────────────────────────────────────────────────┐
 │                                                            │
-│       Go            Python          Java                   │
+│       Go            Python          Container              │
 │       PostgreSQL    Redis           MySQL                  │
 │       Docker        Linux           Concurrency            │
 │                                                            │
@@ -28,9 +28,9 @@
 └────────────────────────────────────────────────────────────┘
 ┌─ MY OSS CONTRIBUTIONS ─────────────────────────────────────┐
 │                                                            |
-|       CLOUDFLARE   RQLITE   COBRA   CILIUM/EBPF(CNCF)      |
+|       RQLITE   COBRA   CILIUM     EBPF                     |
 |                                                            |
-|       DISTRIBUTION(CNCF)                                   │
+|       DISTRIBUTION                                         │
 │                                                            │
 │                                                            │
 └────────────────────────────────────────────────────────────┘
