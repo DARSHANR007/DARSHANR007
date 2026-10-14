@@ -23,15 +23,8 @@
 │   Open source contributions                                │
 │   Backend development                                      │
 │   Distributed systems                                      │
-│   Linux internals                                          │
-│                                                            │
-└────────────────────────────────────────────────────────────┘
-┌─ MY OSS CONTRIBUTIONS ─────────────────────────────────────┐
-│                                                            |
-|       RQLITE   COBRA   CILIUM     EBPF                     |
-|                                                            |
-|       DISTRIBUTION                                         │
-│                                                            │
+│   Linux internals                                          |
+│
 │                                                            │
 └────────────────────────────────────────────────────────────┘
 </code></pre>
