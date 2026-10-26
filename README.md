@@ -8,23 +8,15 @@
 ██████╔╝██║  ██║██║  ██║███████║██║  ██║██║  ██║██║ ╚████║
 ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
 
-┌─ SKILLS ───────────────────────────────────────────────────┐
-│                                                            │
-│       Go            Python          Container              │
-│       PostgreSQL    Redis           MySQL                  │
-│       Docker        Linux           Concurrency            │
-│                                                            │
-│       REST APIs     System Design   Networking             │
-│       Concurrency   Databases       Open Source            │
-│                                                            │
-└────────────────────────────────────────────────────────────┘
+
 ┌─ CURRENTLY ────────────────────────────────────────────────┐
 │                                                            │
-│   Open source contributions                                │
+│   Open source                                              │
 │   Backend development                                      │
 │   Distributed systems                                      │
-│   Linux internals                                          |
-│
+│   Linux                                                    |
+|   Container                                                |
+│                                                            |
 │                                                            │
 └────────────────────────────────────────────────────────────┘
 </code></pre>
