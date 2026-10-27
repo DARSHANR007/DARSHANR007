@@ -12,14 +12,17 @@ def build_showcase(prs):
     )
     closed_count = len(prs) - open_count - merged_count
 
+    def badge(label, color):
+        return (
+            f"![{label}](https://img.shields.io/badge/"
+            f"{label}-{color}?style=flat-square&labelColor=0d1117)"
+        )
+
     lines = [
         (
-            f"![Open](https://img.shields.io/badge/Open-{open_count}"
-            "-2da44e?style=flat-square)"
-            f" ![Merged](https://img.shields.io/badge/Merged-{merged_count}"
-            "-8957e5?style=flat-square)"
-            f" ![Closed](https://img.shields.io/badge/Closed-{closed_count}"
-            "-cf222e?style=flat-square)"
+            f"{badge(f'+ {open_count} Open', '2da44e')} "
+            f"{badge(f'⑂ {merged_count} Merged', '8957e5')} "
+            f"{badge(f'− {closed_count} Closed', 'cf222e')}"
         ),
         "",
         "| Status | Pull request | Repository |",
@@ -30,20 +33,11 @@ def build_showcase(prs):
         details = pr.get("pull_request") or {}
 
         if details.get("merged_at"):
-            status = (
-                "[![Merged](https://img.shields.io/badge/⑂-Merged-"
-                "8957e5?style=flat-square)]"
-            )
+            status = badge("⑂ Merged", "8957e5")
         elif pr.get("state") == "open":
-            status = (
-                "[![Open](https://img.shields.io/badge/＋-Open-"
-                "2da44e?style=flat-square)]"
-            )
+            status = badge("+ Open", "2da44e")
         else:
-            status = (
-                "[![Closed](https://img.shields.io/badge/−-Closed-"
-                "cf222e?style=flat-square)]"
-            )
+            status = badge("− Closed", "cf222e")
 
         repository = pr.get("repository_url", "").removeprefix(
             "https://api.github.com/repos/"
