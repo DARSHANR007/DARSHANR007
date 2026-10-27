@@ -8,18 +8,20 @@
 ██████╔╝██║  ██║██║  ██║███████║██║  ██║██║  ██║██║ ╚████║
 ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
 
-
-┌─ CURRENTLY ────────────────────────────────────────────────┐
-│                                                            │
-│   Open source                                              │
-│   Backend development                                      │
-│   Distributed systems                                      │
-│   Linux                                                    |
-|   Container                                                |
-│                                                            |
-│                                                            │
-└────────────────────────────────────────────────────────────┘
 </code></pre>
+
+
+
+---
+
+## Open Source Contributions
+
+<sub>Recent public pull requests across GitHub, updated automatically.</sub>
+
+<!-- PR-SHOWCASE:START -->
+_
+<!-- PR-SHOWCASE:END -->
+
 
 </div>
 
