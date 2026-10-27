@@ -64,11 +64,13 @@ def escape_markdown(value):
 
 def build_showcase(prs):
     if not prs:
-        return "_No public pull requests found yet._"
+        return (
+            "_No public pull requests found yet. "
+            "Your contributions will appear here automatically._"
+        )
 
     open_count = sum(
-        1 for pr in prs
-        if pr.get("state") == "open"
+        1 for pr in prs if pr.get("state") == "open"
     )
     merged_count = sum(
         1 for pr in prs
@@ -79,20 +81,18 @@ def build_showcase(prs):
     lines = [
         (
             f"![Open](https://img.shields.io/badge/Open-{open_count}"
-            "-2ea44f?style=flat-square) "
-            f"![Merged](https://img.shields.io/badge/Merged-{merged_count}"
-            "-8957e5?style=flat-square) "
-            f"![Closed](https://img.shields.io/badge/Closed-{closed_count}"
+            "-2ea44f?style=flat-square)"
+            f" ![Merged](https://img.shields.io/badge/Merged-{merged_count}"
+            "-8957e5?style=flat-square)"
+            f" ![Closed](https://img.shields.io/badge/Closed-{closed_count}"
             "-6e7781?style=flat-square)"
         ),
         "",
         "<sub>Recent public pull requests · Automatically updated</sub>",
         "",
-        "| Status | Repository | Contribution | Created |",
-        "|:--|:--|:--|--:|",
     ]
 
-    for pr in prs:
+    for index, pr in enumerate(prs):
         details = pr.get("pull_request") or {}
 
         if details.get("merged_at"):
@@ -107,19 +107,40 @@ def build_showcase(prs):
         )
         title = escape_markdown(pr.get("title", "Untitled PR"))
         url = pr.get("html_url", "")
+        created = format_date(pr.get("created_at"))
+        number = pr.get("number", "")
 
         if not repository or not url:
             continue
 
-        lines.append(
-            f"| {status} "
-            f"| [`{escape_markdown(repository)}`]"
-            f"(https://github.com/{repository}) "
-            f"| [{title}]({url}) "
-            f"| {format_date(pr.get('created_at'))} |"
-        )
+        # Each PR gets a compact, GitHub-compatible card.
+        lines.extend([
+            "<table>",
+            "<tr>",
+            '<td width="28" valign="top">',
+            f"<strong>{status}</strong>",
+            "</td>",
+            "<td>",
+            f"<strong><a href=\"{url}\">{title}</a></strong>",
+            "<br/>",
+            (
+                f"<sub><a href=\"https://github.com/{repository}\">"
+                f"{escape_markdown(repository)}</a>"
+                f" · PR #{number} · Created {created}</sub>"
+            ),
+            "</td>",
+            "</tr>",
+            "</table>",
+            "",
+        ])
+
+    lines.extend([
+        "<sub>Showing your latest public pull requests, "
+        "refreshed automatically every six hours.</sub>",
+    ])
 
     return "\n".join(lines)
+
 
 
 def update_readme(showcase):
