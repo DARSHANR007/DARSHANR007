@@ -1,5 +1,36 @@
 
+name: Update PR Showcase
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-showcase:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout profile repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate PR showcase
+        env:
+          GITHUB_USERNAME: DARSHANR007
+          MAX_PRS: "12"
+        run: python scripts/update_pr_showcase.py
+
       - name: Commit README changes
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -13,15 +44,13 @@
 
           git commit -m "chore: update PR showcase"
 
-          # Retry if another commit reaches main concurrently.
           for attempt in 1 2 3; do
             git fetch origin main
 
             if ! git rebase origin/main; then
-              git rebase --abort
-              echo "Rebase failed; retrying..."
-              sleep 2
-              continue
+              git rebase --abort || true
+              echo "Rebase failed."
+              exit 1
             fi
 
             if git push origin HEAD:main; then
