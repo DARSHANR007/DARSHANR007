@@ -74,41 +74,34 @@ def make_badge(label, message, color):
     )
 
 
-def get_status(pr):
-    details = pr.get("pull_request") or {}
-
-    if details.get("merged_at"):
-        return "⑂ Merged", "8957e5"
-
-    if pr.get("state") == "open":
-        return "+ Open", "2da44e"
-
-    return "− Closed", "cf222e"
-
 
 def build_showcase(prs):
-    """Render the colored summary and aligned, date-free PR table."""
+    """Render a clean, minimal contribution feed without dates."""
     if not prs:
         return "_No public pull requests found yet._"
 
-    open_count = sum(1 for pr in prs if pr.get("state") == "open")
+    open_count = sum(
+        1 for pr in prs if pr.get("state") == "open"
+    )
     merged_count = sum(
         1 for pr in prs
         if (pr.get("pull_request") or {}).get("merged_at")
     )
     closed_count = len(prs) - open_count - merged_count
 
-    summary = "　".join([
+    summary = " &nbsp; ".join([
         make_badge("+", f"{open_count} Open", "2da44e"),
         make_badge("⑂", f"{merged_count} Merged", "8957e5"),
         make_badge("−", f"{closed_count} Closed", "cf222e"),
     ])
 
     lines = [
+        "<div align=\"center\">",
+        "",
         summary,
         "",
-        "| Status | Pull request | Repository |",
-        "|:--|:--|:--|",
+        "</div>",
+        "",
     ]
 
     for pr in prs:
@@ -125,19 +118,26 @@ def build_showcase(prs):
         symbol, label = status_text.split(" ", 1)
         status_badge = make_badge(symbol, label, color)
 
-        lines.append(
-            f"| {status_badge} "
-            f"| [**{title}**]({url}) "
-            f"| [`{escape_markdown(repository)}`]"
-            f"(https://github.com/{repository}) |"
-        )
+        pr_number = pr.get("number", "")
+
+        lines.extend([
+            f"{status_badge} &nbsp; [**{title}**]({url})",
+            "",
+            (
+                f"<sub>`{escape_markdown(repository)}`"
+                f" · PR #{pr_number}</sub>"
+            ),
+            "",
+        ])
 
     lines.extend([
-        "",
-        "<sub>Latest public pull requests · Automatically updated</sub>",
+        "<div align=\"center\">",
+        "<sub>Recent public contributions · Automatically updated</sub>",
+        "</div>",
     ])
 
     return "\n".join(lines)
+
 
 
 def update_readme(showcase):
