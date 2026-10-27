@@ -25,53 +25,130 @@
 
 </div>
 
-![%E2%91%82 Merged](https://img.shields.io/badge/%E2%91%82-Merged-8957e5?style=flat-square&labelColor=161b22) &nbsp; [**gofer: do not stat cached regular files during PrepareSave by default**](https://github.com/google/gvisor/pull/16346)
-
-<sub>`google/gvisor` · PR #16346</sub>
-
-![%2B Open](https://img.shields.io/badge/%2B-Open-2da44e?style=flat-square&labelColor=161b22) &nbsp; [**Dead code and incorrect error message in Layer.Validate for layer.Checks**](https://github.com/canonical/pebble/pull/1130)
-
-<sub>`canonical/pebble` · PR #1130</sub>
-
-![%2B Open](https://img.shields.io/badge/%2B-Open-2da44e?style=flat-square&labelColor=161b22) &nbsp; [**remotes/docker: handle context cancellation in pushWriter.Commit**](https://github.com/containerd/containerd/pull/14359)
-
-<sub>`containerd/containerd` · PR #14359</sub>
-
-![%2B Open](https://img.shields.io/badge/%2B-Open-2da44e?style=flat-square&labelColor=161b22) &nbsp; [**lxc/storage: Require target flag for member-local pools on clusters**](https://github.com/canonical/lxd/pull/19134)
-
-<sub>`canonical/lxd` · PR #19134</sub>
-
-![%2B Open](https://img.shields.io/badge/%2B-Open-2da44e?style=flat-square&labelColor=161b22) &nbsp; [**runsc/boot: validate version before loading async pages during restore**](https://github.com/google/gvisor/pull/14279)
-
-<sub>`google/gvisor` · PR #14279</sub>
-
-![%E2%88%92 Closed](https://img.shields.io/badge/%E2%88%92-Closed-cf222e?style=flat-square&labelColor=161b22) &nbsp; [**btf: parse BTF types in a single pass during decoder initialization**](https://github.com/cilium/ebpf/pull/2082)
-
-<sub>`cilium/ebpf` · PR #2082</sub>
-
-![%2B Open](https://img.shields.io/badge/%2B-Open-2da44e?style=flat-square&labelColor=161b22) &nbsp; [**pkg/idpool: lazy allocate idCache maps**](https://github.com/cilium/cilium/pull/47926)
-
-<sub>`cilium/cilium` · PR #47926</sub>
-
-![%E2%91%82 Merged](https://img.shields.io/badge/%E2%91%82-Merged-8957e5?style=flat-square&labelColor=161b22) &nbsp; [**fix: prevent uint32 overflow in struct_ops bounds check**](https://github.com/cilium/ebpf/pull/2025)
-
-<sub>`cilium/ebpf` · PR #2025</sub>
-
-![%E2%88%92 Closed](https://img.shields.io/badge/%E2%88%92-Closed-cf222e?style=flat-square&labelColor=161b22) &nbsp; [**add bounded worker pool for connection handling**](https://github.com/rqlite/rqlite/pull/2678)
-
-<sub>`rqlite/rqlite` · PR #2678</sub>
-
-![%E2%91%82 Merged](https://img.shields.io/badge/%E2%91%82-Merged-8957e5?style=flat-square&labelColor=161b22) &nbsp; [**replace interface{} with any in db.go according to modern 1.18+ go standards**](https://github.com/rqlite/rqlite/pull/2677)
-
-<sub>`rqlite/rqlite` · PR #2677</sub>
-
-![%E2%91%82 Merged](https://img.shields.io/badge/%E2%91%82-Merged-8957e5?style=flat-square&labelColor=161b22) &nbsp; [**feat(s3): parse and strictly validate redirectendpoint on driver initialization**](https://github.com/distribution/distribution/pull/4870)
-
-<sub>`distribution/distribution` · PR #4870</sub>
-
-![%2B Open](https://img.shields.io/badge/%2B-Open-2da44e?style=flat-square&labelColor=161b22) &nbsp; [**Cobra's flag group validation functions have hardcoded error messages that developers cannot customize.**](https://github.com/spf13/cobra/pull/2402)
-
-<sub>`spf13/cobra` · PR #2402</sub>
+<table width="100%">
+<tbody>
+<tr>
+<td width="105" valign="top" align="left">
+<img src="https://img.shields.io/badge/%E2%91%82-Merged-8957e5?style=flat-square&labelColor=161b22" alt="Merged" />
+</td>
+<td valign="top">
+<a href="https://github.com/google/gvisor/pull/16346"><strong>gofer: do not stat cached regular files during PrepareSave by default</strong></a>
+<br/>
+<sub><code>google/gvisor</code> · PR #16346</sub>
+</td>
+</tr>
+<tr>
+<td width="105" valign="top" align="left">
+<img src="https://img.shields.io/badge/%2B-Open-2da44e?style=flat-square&labelColor=161b22" alt="Open" />
+</td>
+<td valign="top">
+<a href="https://github.com/canonical/pebble/pull/1130"><strong>Dead code and incorrect error message in Layer.Validate for layer.Checks</strong></a>
+<br/>
+<sub><code>canonical/pebble</code> · PR #1130</sub>
+</td>
+</tr>
+<tr>
+<td width="105" valign="top" align="left">
+<img src="https://img.shields.io/badge/%2B-Open-2da44e?style=flat-square&labelColor=161b22" alt="Open" />
+</td>
+<td valign="top">
+<a href="https://github.com/containerd/containerd/pull/14359"><strong>remotes/docker: handle context cancellation in pushWriter.Commit</strong></a>
+<br/>
+<sub><code>containerd/containerd</code> · PR #14359</sub>
+</td>
+</tr>
+<tr>
+<td width="105" valign="top" align="left">
+<img src="https://img.shields.io/badge/%2B-Open-2da44e?style=flat-square&labelColor=161b22" alt="Open" />
+</td>
+<td valign="top">
+<a href="https://github.com/canonical/lxd/pull/19134"><strong>lxc/storage: Require target flag for member-local pools on clusters</strong></a>
+<br/>
+<sub><code>canonical/lxd</code> · PR #19134</sub>
+</td>
+</tr>
+<tr>
+<td width="105" valign="top" align="left">
+<img src="https://img.shields.io/badge/%2B-Open-2da44e?style=flat-square&labelColor=161b22" alt="Open" />
+</td>
+<td valign="top">
+<a href="https://github.com/google/gvisor/pull/14279"><strong>runsc/boot: validate version before loading async pages during restore</strong></a>
+<br/>
+<sub><code>google/gvisor</code> · PR #14279</sub>
+</td>
+</tr>
+<tr>
+<td width="105" valign="top" align="left">
+<img src="https://img.shields.io/badge/%E2%88%92-Closed-cf222e?style=flat-square&labelColor=161b22" alt="Closed" />
+</td>
+<td valign="top">
+<a href="https://github.com/cilium/ebpf/pull/2082"><strong>btf: parse BTF types in a single pass during decoder initialization</strong></a>
+<br/>
+<sub><code>cilium/ebpf</code> · PR #2082</sub>
+</td>
+</tr>
+<tr>
+<td width="105" valign="top" align="left">
+<img src="https://img.shields.io/badge/%2B-Open-2da44e?style=flat-square&labelColor=161b22" alt="Open" />
+</td>
+<td valign="top">
+<a href="https://github.com/cilium/cilium/pull/47926"><strong>pkg/idpool: lazy allocate idCache maps</strong></a>
+<br/>
+<sub><code>cilium/cilium</code> · PR #47926</sub>
+</td>
+</tr>
+<tr>
+<td width="105" valign="top" align="left">
+<img src="https://img.shields.io/badge/%E2%91%82-Merged-8957e5?style=flat-square&labelColor=161b22" alt="Merged" />
+</td>
+<td valign="top">
+<a href="https://github.com/cilium/ebpf/pull/2025"><strong>fix: prevent uint32 overflow in struct_ops bounds check</strong></a>
+<br/>
+<sub><code>cilium/ebpf</code> · PR #2025</sub>
+</td>
+</tr>
+<tr>
+<td width="105" valign="top" align="left">
+<img src="https://img.shields.io/badge/%E2%88%92-Closed-cf222e?style=flat-square&labelColor=161b22" alt="Closed" />
+</td>
+<td valign="top">
+<a href="https://github.com/rqlite/rqlite/pull/2678"><strong>add bounded worker pool for connection handling</strong></a>
+<br/>
+<sub><code>rqlite/rqlite</code> · PR #2678</sub>
+</td>
+</tr>
+<tr>
+<td width="105" valign="top" align="left">
+<img src="https://img.shields.io/badge/%E2%91%82-Merged-8957e5?style=flat-square&labelColor=161b22" alt="Merged" />
+</td>
+<td valign="top">
+<a href="https://github.com/rqlite/rqlite/pull/2677"><strong>replace interface{} with any in db.go according to modern 1.18+ go standards</strong></a>
+<br/>
+<sub><code>rqlite/rqlite</code> · PR #2677</sub>
+</td>
+</tr>
+<tr>
+<td width="105" valign="top" align="left">
+<img src="https://img.shields.io/badge/%E2%91%82-Merged-8957e5?style=flat-square&labelColor=161b22" alt="Merged" />
+</td>
+<td valign="top">
+<a href="https://github.com/distribution/distribution/pull/4870"><strong>feat(s3): parse and strictly validate redirectendpoint on driver initialization</strong></a>
+<br/>
+<sub><code>distribution/distribution</code> · PR #4870</sub>
+</td>
+</tr>
+<tr>
+<td width="105" valign="top" align="left">
+<img src="https://img.shields.io/badge/%2B-Open-2da44e?style=flat-square&labelColor=161b22" alt="Open" />
+</td>
+<td valign="top">
+<a href="https://github.com/spf13/cobra/pull/2402"><strong>Cobra's flag group validation functions have hardcoded error messages that developers cannot customize.</strong></a>
+<br/>
+<sub><code>spf13/cobra</code> · PR #2402</sub>
+</td>
+</tr>
+</tbody>
+</table>
 
 <div align="center">
 <sub>Recent public contributions · Automatically updated</sub>
