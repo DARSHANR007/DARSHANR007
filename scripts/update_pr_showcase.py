@@ -88,34 +88,30 @@ def get_status(pr):
 
 
 def build_showcase(prs):
-    """Render a clean, minimal contribution feed without dates."""
+    """Render an aligned, compact PR feed."""
     if not prs:
         return "_No public pull requests found yet._"
 
-    open_count = sum(
-        1 for pr in prs if pr.get("state") == "open"
-    )
-
+    open_count = sum(1 for pr in prs if pr.get("state") == "open")
     merged_count = sum(
         1 for pr in prs
         if (pr.get("pull_request") or {}).get("merged_at")
     )
-
     closed_count = len(prs) - open_count - merged_count
-
-    summary = " &nbsp; ".join([
-        make_badge("+", f"{open_count} Open", "2da44e"),
-        make_badge("⑂", f"{merged_count} Merged", "8957e5"),
-        make_badge("−", f"{closed_count} Closed", "cf222e"),
-    ])
 
     lines = [
         '<div align="center">',
         "",
-        summary,
+        " &nbsp; ".join([
+            make_badge("+", f"{open_count} Open", "2da44e"),
+            make_badge("⑂", f"{merged_count} Merged", "8957e5"),
+            make_badge("−", f"{closed_count} Closed", "cf222e"),
+        ]),
         "",
         "</div>",
         "",
+        '<table width="100%">',
+        "<tbody>",
     ]
 
     for pr in prs:
@@ -123,30 +119,42 @@ def build_showcase(prs):
             "https://api.github.com/repos/"
         )
         url = pr.get("html_url", "")
-        title = escape_markdown(
-            pr.get("title", "Untitled PR")
-        )
+        title = pr.get("title", "Untitled PR")
+        number = pr.get("number", "")
 
         if not repository or not url:
             continue
 
         status_text, color = get_status(pr)
         symbol, label = status_text.split(" ", 1)
-        status_badge = make_badge(symbol, label, color)
 
-        pr_number = pr.get("number", "")
+        badge_url = (
+            "https://img.shields.io/badge/"
+            f"{quote(symbol, safe='')}-"
+            f"{quote(label, safe='')}-{color}"
+            "?style=flat-square&labelColor=161b22"
+        )
 
         lines.extend([
-            f"{status_badge} &nbsp; [**{title}**]({url})",
-            "",
+            "<tr>",
+            '<td width="105" valign="top" align="left">',
+            f'<img src="{badge_url}" alt="{label}" />',
+            "</td>",
+            '<td valign="top">',
+            f'<a href="{url}"><strong>{escape_markdown(title)}</strong></a>',
+            "<br/>",
             (
-                f"<sub>`{escape_markdown(repository)}`"
-                f" · PR #{pr_number}</sub>"
+                f"<sub><code>{escape_markdown(repository)}</code>"
+                f" · PR #{number}</sub>"
             ),
-            "",
+            "</td>",
+            "</tr>",
         ])
 
     lines.extend([
+        "</tbody>",
+        "</table>",
+        "",
         '<div align="center">',
         "<sub>Recent public contributions · Automatically updated</sub>",
         "</div>",
