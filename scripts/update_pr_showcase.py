@@ -6,7 +6,6 @@
 import json
 import os
 import sys
-from datetime import datetime
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode, quote
@@ -47,12 +46,15 @@ def fetch_pull_requests():
             f"{exc.read().decode('utf-8', errors='replace')}"
         ) from exc
     except URLError as exc:
-        raise RuntimeError(f"Could not reach GitHub API: {exc}") from exc
+        raise RuntimeError(
+            f"Could not reach GitHub API: {exc}"
+        ) from exc
 
     return data.get("items", [])[:MAX_PRS]
 
 
 def escape_markdown(value):
+    """Escape characters that could break the generated Markdown."""
     return (
         str(value)
         .replace("\\", "\\\\")
@@ -74,6 +76,16 @@ def make_badge(label, message, color):
     )
 
 
+def get_status(pr):
+    """Return the PR status label and its badge color."""
+    if (pr.get("pull_request") or {}).get("merged_at"):
+        return "⑂ Merged", "8957e5"
+
+    if pr.get("state") == "open":
+        return "+ Open", "2da44e"
+
+    return "− Closed", "cf222e"
+
 
 def build_showcase(prs):
     """Render a clean, minimal contribution feed without dates."""
@@ -83,10 +95,12 @@ def build_showcase(prs):
     open_count = sum(
         1 for pr in prs if pr.get("state") == "open"
     )
+
     merged_count = sum(
         1 for pr in prs
         if (pr.get("pull_request") or {}).get("merged_at")
     )
+
     closed_count = len(prs) - open_count - merged_count
 
     summary = " &nbsp; ".join([
@@ -96,7 +110,7 @@ def build_showcase(prs):
     ])
 
     lines = [
-        "<div align=\"center\">",
+        '<div align="center">',
         "",
         summary,
         "",
@@ -109,7 +123,9 @@ def build_showcase(prs):
             "https://api.github.com/repos/"
         )
         url = pr.get("html_url", "")
-        title = escape_markdown(pr.get("title", "Untitled PR"))
+        title = escape_markdown(
+            pr.get("title", "Untitled PR")
+        )
 
         if not repository or not url:
             continue
@@ -131,13 +147,12 @@ def build_showcase(prs):
         ])
 
     lines.extend([
-        "<div align=\"center\">",
+        '<div align="center">',
         "<sub>Recent public contributions · Automatically updated</sub>",
         "</div>",
     ])
 
     return "\n".join(lines)
-
 
 
 def update_readme(showcase):
@@ -159,7 +174,13 @@ def update_readme(showcase):
     if start > end:
         raise ValueError("The README showcase markers are reversed.")
 
-    updated = content[:start] + "\n" + showcase + "\n" + content[end:]
+    updated = (
+        content[:start]
+        + "\n"
+        + showcase
+        + "\n"
+        + content[end:]
+    )
 
     if updated != content:
         README_PATH.write_text(updated, encoding="utf-8")
