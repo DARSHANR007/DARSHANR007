@@ -8,15 +8,17 @@
 ██████╔╝██║  ██║██║  ██║███████║██║  ██║██║  ██║██║ ╚████║
 ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
 
+  Interested in operating systems, Linux, and systems engineering
+
 </code></pre>
 
 
 
----
+
 
 ## Open Source Contributions
 
-<sub>Recent public pull requests across GitHub, updated automatically.</sub>
+
 
 <!-- PR-SHOWCASE:START -->
 <div align="center">
