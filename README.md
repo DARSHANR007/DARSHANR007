@@ -23,7 +23,7 @@
 <!-- PR-SHOWCASE:START -->
 <div align="center">
 
-![%2B 6%20Open](https://img.shields.io/badge/%2B-6%20Open-2da44e?style=flat-square&labelColor=161b22) &nbsp; ![%E2%91%82 4%20Merged](https://img.shields.io/badge/%E2%91%82-4%20Merged-8957e5?style=flat-square&labelColor=161b22) &nbsp; ![%E2%88%92 2%20Closed](https://img.shields.io/badge/%E2%88%92-2%20Closed-cf222e?style=flat-square&labelColor=161b22)
+![%2B 5%20Open](https://img.shields.io/badge/%2B-5%20Open-2da44e?style=flat-square&labelColor=161b22) &nbsp; ![%E2%91%82 4%20Merged](https://img.shields.io/badge/%E2%91%82-4%20Merged-8957e5?style=flat-square&labelColor=161b22) &nbsp; ![%E2%88%92 3%20Closed](https://img.shields.io/badge/%E2%88%92-3%20Closed-cf222e?style=flat-square&labelColor=161b22)
 
 </div>
 
@@ -91,7 +91,7 @@
 </tr>
 <tr>
 <td width="105" valign="top" align="left">
-<img src="https://img.shields.io/badge/%2B-Open-2da44e?style=flat-square&labelColor=161b22" alt="Open" />
+<img src="https://img.shields.io/badge/%E2%88%92-Closed-cf222e?style=flat-square&labelColor=161b22" alt="Closed" />
 </td>
 <td valign="top">
 <a href="https://github.com/cilium/cilium/pull/47926"><strong>pkg/idpool: lazy allocate idCache maps</strong></a>
